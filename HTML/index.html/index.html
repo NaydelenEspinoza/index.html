@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio web personal</title>
+    <link rel="stylesheet" href="estilo.css"> 
+</head>
+<body>
+
+    <!-- ENCABEZADO DE LA PÁGINA -->
+    <header>
+        <h1>Naydelen Espinoza Carbo</h1>
+        <p>Estudiante de Ingeniería en Sistemas - Tercer Semestre</p>
+        <img src="/foto-mia.jpg" alt="mi imagen" width="250">
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav>
+        <ul>
+            <li><a href="#sobremi">Sobre mí</a></li>
+            <li><a href="#intereses">Intereses</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#audio">Audio</a></li>
+        </ul>
+    </nav>
+
+    <!-- CUERPO PRINCIPAL -->
+    <main>
+
+        <section id="sobremi">
+            <h2>Sobre mí</h2>
+            <p>Soy <strong>Naydelen Espinoza Carbo</strong>, estudiante de <em>Ingeniería en Sistemas</em> cursando el tercer semestre. Me interesa el desarrollo de software, las bases de datos y la lógica de programación. Estoy en formación y cada día aprendo algo nuevo del mundo tecnológico.</p>
+        </section>
+
+        <section id="intereses">
+            <h2>Intereses</h2>
+            <ul>
+                <li>Interés en tener proyectos básicos en HTML</li>
+                <li>Interés en crear sitios web funcionales y seguros</li>
+            </ul>
+        </section>
+
+        <section id="habilidades">
+            <h2>Tabla de habilidades</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Habilidad</th>
+                        <th>Nivel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML y CSS</td>
+                        <td>Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Básico</td>
+                    </tr>
+                    <tr>
+                        <td>Algoritmos</td>
+                        <td>Intermedio</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Aprendiendo con entusiasmo cada día</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="multimedia">
+            <h2>Presentación personal</h2>
+            <video controls width="320">
+                <source src="/video-mepresento.mp4" type="video/mp4"> 
+                Tu navegador no soporta el video.
+            </video>
+        </section>
+
+        <section id="contacto">
+            <fieldset>
+                <form>
+                    <legend><strong>Formulario De Contacto</strong></legend><br/>
+                    <label>Nombre y Apellido: <input type="text" name="nombre y apellido" required></label><br/><br/>
+                    <label>Correo electrónico: <input type="email" name="Correo" required></label><br/><br/>
+                    <label>Edad: <input type="number" name="Edad" min="18" required></label><br/><br/>
+                    <label>Género:<br/>
+                        <select name="genero" required>
+                            <option value="">Selecciona</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </label><br/><br/>
+                    <label>Intereses: <input type="text" name="intereses"></label><br/><br/>
+                    <label>Comentarios:<br><textarea name="Comentarios"></textarea></label><br/>
+                    <input type="submit" value="Enviar">
+                </form>
+            </fieldset>
+        </section>
+
+        <section id="audio">
+            <h2>Audio</h2>
+            <audio src="/palabras_gerentes.mp3" preload="none" controls></audio> 
+        </section>
+
+    </main>
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>Sígueme en:</p>
+        <ul>
+            <li><a href="https://www.instagram.com/naydelin_17espinoza?igsh=NnAyOGtkcjVkaDlh&utm_source=qr" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/share/12MRc9GuZtB/?mibextid=wwXIfr" target="_blank">Facebook</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        </ul>
+        <p>&copy; <span id="año-actual"></span> Naydelen Espinoza. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SCRIPT DEL AÑO ACTUAL -->
+    <script>
+        document.getElementById('año-actual').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
